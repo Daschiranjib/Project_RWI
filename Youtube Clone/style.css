@@ -116,34 +116,19 @@ body {
 
 /* Video-container */
 .video-container {
+    width: calc(100% - 250px);
     margin-top: 120px;
+    margin-left: 250px;
     padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 20px 5px;
+    overflow-x: hidden;
 }
 
 .video {
-    flex: 0 0 calc(25% - 20px); 
-    margin-bottom: 20px; 
-}
-
-@media screen and (max-width: 1200px) {
-    .video {
-        flex: 0 0 calc(33.33% - 20px); 
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .video {
-        flex: 0 0 calc(50% - 20px); 
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .video {
-        flex: 0 0 calc(100% - 20px);
-    }
+    min-height: 250px;
+    height: auto;
 }
 
 
