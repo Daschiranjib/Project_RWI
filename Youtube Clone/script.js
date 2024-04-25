@@ -9,17 +9,17 @@ fetch(video_http + new URLSearchParams({
     key: api_key,
     part: 'snippet',
     chart: 'mostPopular',
-    maxResults:52,
+    maxResults:50,
     regionCode:'IN'
 }))
-.then(res=>res.json())
-.then(data=>{
-    // console.log('Data : ', data);
-    data.items.forEach((item)=>{
-        getChannelIcon(item);
-    });
-})
-.catch(err => {console.error( err)})
+    .then(res => res.json())
+    .then(data => {
+        // console.log('Data : ', data);
+        data.items.forEach((item) => {
+            getChannelIcon(item);
+        });
+    })
+    .catch(err => { console.error(err) })
 
 
 const getChannelIcon = (video_data) => {
@@ -28,11 +28,11 @@ const getChannelIcon = (video_data) => {
         part: 'snippet',
         id: video_data.snippet.channelId
     }))
-    .then(res => res.json())
-    .then(data => {
-        video_data.channelThumbnail = data.items[0].snippet.thumbnails.default.url;
-        makeVideoCard(video_data);
-    })
+        .then(res => res.json())
+        .then(data => {
+            video_data.channelThumbnail = data.items[0].snippet.thumbnails.default.url;
+            makeVideoCard(video_data);
+        })
 }
 
 const makeVideoCard = (data) => {
@@ -55,7 +55,7 @@ const searchBtn = document.querySelector('.search-btn');
 let searchLink = "https://www.youtube.com/results?search_query=";
 
 searchBtn.addEventListener('click', () => {
-    if(searchInput.value.length){
+    if (searchInput.value.length) {
         location.href = searchLink + searchInput.value;
     }
 })
