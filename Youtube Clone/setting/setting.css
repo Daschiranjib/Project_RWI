@@ -1,0 +1,468 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.5s ease;
+}
+
+/* Light mode styles */
+.navbar {
+  background-color: #fff;
+  color: #fcf7f7;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #222;
+}
+
+body.dark-mode .navbar {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Add more styles for light and dark mode as needed */
+
+
+
+
+
+body {
+
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000;
+  color: #eceaea;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  /* left: -100%; */
+  height: 100vh;
+  padding: 16px 16px 0;
+  background: #fefdfd;
+  box-shadow: 1px 0 0 rgba(22, 8, 43, 0.1);
+  z-index: 100;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.nav_container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 48px;
+  overflow: auto;
+  scrollbar-width: none;
+  text-decoration: none;
+}
+
+/* .nav_container::-webkit-scrollbar {
+  display: none;
+} */
+
+.nav_logo {
+  font-weight: 600;
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.logo_name {
+  display: flex;
+}
+
+.logo_name i {
+  font-size: 25px;
+  margin-right: 10px;
+  color: #ff0000;
+}
+
+.nav_list,
+.nav_items {
+  display: grid;
+}
+
+.nav_list {
+  row-gap: 40px;
+}
+
+.nav_items {
+  row-gap: 24px;
+}
+
+.nav_link {
+  display: flex;
+  align-items: center;
+  color: #fffbfb;
+  text-decoration: none;
+}
+
+.nav_link {
+  display: flex;
+  align-items: center;
+  color: #fffbfb;
+  text-decoration: none;
+}
+
+.nav_link:hover {
+  color: #ff0000;
+}
+
+.nav_icon {
+  width: 40px;
+  font-size: 19px;
+  text-decoration: none;
+}
+
+
+
+.nav_subititle {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #eceaea;
+
+}
+
+
+.nav_dropdown-content {
+  display: grid;
+  row-gap: 8px;
+  padding: 10px;
+}
+
+.nav_dropdown-item {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.nav_dropdown-item:hover {
+  color: #ff0000;
+}
+
+
+.nav_dropdown:hover {
+  min-height: 100rem;
+}
+
+.subscribe {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+
+
+
+.subscribe-container {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+/* .show-menu {
+  left: 0;
+} */
+
+.active {
+  color: #ff0000;
+}
+
+
+
+/* main navbar  */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #f3f1f1;
+  display: flex;
+  align-items: center;
+  padding: 0 2.5vw;
+}
+
+
+
+
+.logo {
+  height: 30px;
+  margin: -10px 30px 0;
+}
+
+
+
+.search-box {
+  position: relative;
+  max-width: 500px;
+  width: 50%;
+  height: 35px;
+  display: flex;
+  margin-left: 30px;
+
+
+}
+
+.search-bar {
+  width: 85%;
+  height: 100%;
+  border: 2px solid #dbdbdb;
+  padding: 0 20px;
+  font-size: 16px;
+  text-transform: capitalize;
+  border: solid 2px #1c1c1c;
+  border-radius: 20px 0px 0px 20px;
+
+}
+
+.search-btn {
+  width: 15%;
+  height: 109%;
+  background: #f0f0f0;
+  border: 2px solid #dbdbdb;
+  padding: 5px 0;
+  border-left: none;
+
+  border: solid 2px #1c1c1c;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.search-btn img {
+  height: 90%;
+}
+
+.user-options {
+  height: 35px;
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.user-options .icon {
+  height: 80%;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+
+.user-dp {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-dp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.containerr {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  height: 100px;
+  width: 30%;
+  /* Adjust width as per your requirement */
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+}
+
+.thirty-percent {
+  width: 30%;
+}
+
+.seventy-percent {
+  width: 70%;
+}
+
+.sidebar {
+  width: 30%;
+  color: #fdfcfc;
+}
+
+h4 a {
+  color: #fdfafa;
+  text-decoration: none;
+}
+
+h4 a:hover {
+  color: blue;
+}
+
+.dark-mode .sidebar {
+  width: 30%;
+  color: #fff;
+  /* Adjust text color for dark mode */
+}
+
+.dark-mode h4 a {
+  color: #fff;
+  /* Adjust link color for dark mode */
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+
+}
+
+.samne {
+  position: fixed;
+  top: 50px;
+  right: 30px;
+  padding: 20px;
+}
+
+div {
+  padding: 25px;
+}
+
+.links a {
+
+  text-decoration: none;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  /* Arrange links vertically */
+  align-items: center;
+  /* Add some space between links */
+}
+
+.logo-text {
+  padding: 47px;
+}
+
+/* Normal CSS styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  padding: 16px 16px 0;
+  background: #fcfcfc;
+  box-shadow: 1px 0 0 rgba(22, 8, 43, 0.1);
+  z-index: 100;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+/* Add more normal styles as needed */
+
+/* Media query for devices with a maximum width of 768px */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    height: 80px;
+    /* Adjust height as needed */
+    padding: 0 10px;
+    /* Adjust padding as needed */
+  }
+
+  .search-box {
+    width: 70%;
+  }
+
+  .user-options {
+    margin-right: 10px;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .samne {
+    display: none;
+  }
+
+  .nav {
+    padding: 16px;
+  }
+
+  .nav_logo {
+    margin-bottom: 20px;
+  }
+
+  .nav_list {
+    row-gap: 20px;
+    /* Adjust row gap for smaller screens */
+  }
+
+  .nav_items {
+    row-gap: 16px;
+    /* Adjust row gap for smaller screens */
+  }
+
+  .nav_icon {
+    width: 30px;
+    /* Adjust icon width for smaller screens */
+    font-size: 16px;
+    /* Adjust icon font size for smaller screens */
+  }
+
+  .nav_subititle {
+    font-size: 14px;
+    /* Adjust subtitle font size for smaller screens */
+  }
+
+  .subscribe {
+    width: 30px;
+    /* Adjust subscribe button width for smaller screens */
+    height: 30px;
+    /* Adjust subscribe button height for smaller screens */
+    border-width: 1px;
+    /* Adjust subscribe button border width for smaller screens */
+  }
+
+
+}
+
+/* dark-mode  ke liye css */
+
+
+/* Dark mode styles */
+.dark-mode .box.seventy-percent .content {
+  color: #fff;
+  /* Adjust text color for dark mode */
+}
+
+.dark-mode .box.seventy-percent .content h2,
+.dark-mode .box.seventy-percent .content h1,
+.dark-mode .box.seventy-percent .content h4,
+.dark-mode .box.seventy-percent .content p,
+.dark-mode .box.seventy-percent .content h3 {
+  color: #fff;
+}
+
+.dark-mode .box.seventy-percent .content hr {
+  border-color: #fff;
+}
+
+
+
+.dark-mode .box.seventy-percent .content .logo-text {
+  color: #fff;
+}
+
+.dark-mode .box.seventy-percent .content .links h4 a {
+  color: #fff;
+}

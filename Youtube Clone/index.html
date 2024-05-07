@@ -8,6 +8,7 @@
   <script src="https://kit.fontawesome.com/f531065d24.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css" />
   <title>YouTube Clone</title>
+
 </head>
 
 <body>
@@ -20,40 +21,208 @@
     </div>
     <img src="img/logo.PNG" class="logo" alt="" />
     <div class="search-box">
-      <input type="text" class="search-bar" placeholder="search" />
+      <input style="text-decoration: none;" type="text" class="search-bar" placeholder="search" />
       <button class="search-btn"><img src="img/search.PNG" alt="" /></button>
     </div>
     <div class="user-options">
       <img src="img/video.PNG" class="icon" alt="" />
       <img src="img/grid.PNG" class="icon" alt="" />
       <img src="img/bell.PNG" class="icon" alt="" />
-      <div class="user-dp">
-        <img src="img/user.png" alt="" />
-      </div>
+
+
+    </div>
+    <div class="user-dp">
+      <img src="./img/profile.png" onclick="toggleMenu()" alt="" />
     </div>
   </nav>
 
-  <!-- sidebar -->
-  <div class="side-bar">
-    <a href="#" class="links active"><img src="img/home.PNG" alt="" />home</a>
-    <a href="#" class="links"><img src="img/explore.PNG" alt="" />explore</a>
-    <a href="#" class="links"><img src="img/subscription.PNG" alt="" />subscription</a>
-    <hr class="seperator" />
-    <a href="#" class="links"><img src="img/library.PNG" alt="" />library</a>
-    <a href="#" class="links"><img src="img/history.PNG" alt="" />history</a>
-    <a href="#" class="links"><img src="img/your-video.PNG" alt="" />your video</a>
-    <a href="#" class="links"><img src="img/watch-later.PNG" alt="" />watch leater</a>
-    <a href="#" class="links"><img src="img/liked video.PNG" alt="" />like video</a>
-    <a href="#" class="links"><img src="img/show more.PNG" alt="" />show more</a>
-
-
+  <!-- profile sidebar -->
+  <div class="profile-menu" id="subMenu">
+    <div class="profile-bar">
+      <div class="user">
+        <img src="./img/profile.png" alt="">
+        <h2>Vaibhav</h2>
+      </div>
+      <hr>
+      <a href="" class="profile-menu-links">
+        <i class="fa-brands fa-google icons-link"></i>
+        <p>Google Account</p>
+      </a>
+      <a href="" class="profile-menu-links">
+        <i class="fa-solid fa-users-viewfinder icons-link"></i>
+        <p>Switch Account</p>
+        <span>></span>
+      </a>
+      <a href="" class="profile-menu-links">
+        <i class="fa-solid fa-right-from-bracket icons-link"></i>
+        <p>Sign Out</p>
+      </a>
+      <hr>
+      <a href="" class="profile-menu-links">
+        <i class="fa-regular fa-square-caret-right icons-link"></i>
+        <p>YouTube Studio</p>
+        <span>></span>
+      </a>
+      <a href="" class="profile-menu-links">
+        <i class="fa-solid fa-dollar-sign icons-link "></i>
+        <p>purchase and membership
+        </p>
+        <span>></span>
+      </a>
+      <hr>
+      <a href="" class="profile-menu-links">
+        <i class="fa-solid fa-user-gear icons-link"></i>
+        <p>your data in Youtube</p>
+        <span>></span>
+      </a>
+      <a href="" class="profile-menu-links">
+        <i class="fa-solid fa-globe icons-link"></i>
+        <p>language : English</p>
+        <span>></span>
+      </a>
+      <a href="" class="profile-menu-links">
+        <i class="fa-solid fa-ban icons-link"></i>
+        <p>restricted mode</p>
+        <span>></span>
+      </a>
+      <a href="" class="profile-menu-links">
+        <i class="fa-solid fa-location-dot icons-link"></i>
+        <p>locATion india</p>
+        <span>></span>
+      </a>
+      <a href="./setting/setting.html" class="profile-menu-links">
+        <i class="fa-regular fa-gear icons-link"></i>
+        <p>settings</p>
+        <span>></span>
+      </a>
+      <hr>
+      <a href="" class="profile-menu-links">
+        <i class="fa-solid fa-circle-info icons-link"></i>
+        <p>help</p>
+        <span>></span>
+      </a>
+      <hr>
+    </div>
   </div>
 
+
+
+
+  <!--   side bar     -->
+  <section class="nav" id="navbar">
+    <nav class="nav_container">
+      <div>
+        <a href="#" class="nav_link nav_logo ">
+          <i class="fa-solid fa-bars nav_icon"></i>
+          <span class="logo_name">
+            <i class="fab fa-youtube"></i>
+            <h2>Youtube</h2>
+          </span>
+        </a>
+
+        <div class="nav_list">
+          <div class="nav_items navtop">
+            <a href="#" class="nav_link navtop active">
+              <i class="fa fa-house nav_icon"></i>
+              <span class="nav_name">Home</span>
+            </a>
+            <a href="#" class="nav_link navtop">
+              <i class="fa fa-compass nav_icon"></i>
+              <span class="nav_name">Explore</span>
+            </a>
+            <a href="#" class="nav_link navtop">
+              <i class="fa-brands fa-tiktok nav_icon"></i>
+              <span class="nav_name">Short Video</span>
+            </a>
+            <a href="#" class="nav_link navtop">
+              <i class="fa-solid fa-users nav_icon"></i>
+              <span class="nav_name">Channel</span>
+            </a>
+            <a href="#" class="nav_link navtop">
+              <i class="fa-solid fa-video nav_icon"></i>
+              <span class="nav_name">Library</span>
+            </a>
+            <a href="#" class="nav_link navtop">
+              <i class="fa-solid fa-clock-rotate-left nav_icon"></i>
+              <span class="nav_name">History</span>
+            </a>
+            <a href="#" class="nav_link navtop">
+              <i class="fa-solid fa-thumbs-up nav_icon"></i>
+              <span class="nav_name">Like</span>
+            </a>
+
+            <div>
+              <a href="#" class="nav_link">
+                <i class="fa-solid fa-comment nav_icon"></i>
+                <span class="nav_name">Messages</span>
+              </a>
+            </div>
+
+            <div class="nav_items subscribe-container">
+              <h3 class="nav_subititle">SUBSCRIPTIONS</h3>
+
+              <a href="#" class="nav_link">
+                <img class="subscribe"
+                  src="https://img.icons8.com/external-victoruler-flat-victoruler/64/000000/external-boy-people-victoruler-flat-victoruler-5.png"
+                  alt="">
+                <span class="nav_name">GorkCoder</span>
+              </a>
+              <a href="#" class="nav_link">
+                <img class="subscribe"
+                  src="https://img.icons8.com/external-victoruler-flat-victoruler/64/000000/external-boy-occupation-and-people-victoruler-flat-victoruler.png" />
+                <span class="nav_name">SASTA@CODER</span>
+              </a>
+              <a href="#" class="nav_link">
+                <img class="subscribe"
+                  src="https://img.icons8.com/external-victoruler-linear-colour-victoruler/64/000000/external-boy-children-avatar-victoruler-linear-colour-victoruler-2.png" />
+                <span class="nav_name">RoundToHell®️</span>
+              </a>
+              <a href="#" class="nav_link">
+                <img class="subscribe"
+                  src="https://img.icons8.com/external-victoruler-flat-victoruler/64/000000/external-boy-children-avatar-victoruler-flat-victoruler-12.png" />
+                <span class="nav_name">CodeWithHarry</span>
+              </a>
+
+
+              <div class="nav_dropdown">
+                <a href="#" class="nav_link">
+                  <i class="fa-solid fa-chevron-down nav_icon"></i>
+                  <span class="nav_name">YouTube Help</span>
+                </a>
+
+                <div class="nav_dropdown-collapse nav_dropdown-second">
+                  <div class="nav_dropdown-content">
+
+                    <a href="./setting/setting.html" class="nav_link navtop" style="margin-top: 15px;">
+                      <i class="fa-solid fa-gear nav_icon"></i>
+                      <span class="nav_name">Setting</span>
+                    </a>
+                    <a href="#" class="nav_link navtop" style="margin-top: 15px;">
+                      <i class="fa-regular fa-flag nav_icon"></i>
+                      <span class="nav_name">Report History</span>
+                    </a>
+                    <a href="#" class="nav_link navtop" style="margin-top: 15px;">
+                      <i class="fa-solid fa-circle-question nav_icon"></i>
+                      <span class="nav_name">help</span>
+                    </a>
+                    <a href="#" class="nav_link navtop" style="margin-top: 15px;">
+                      <i class="fa-regular fa-message nav_icon"></i>
+                      <span class="nav_name">Send Feedback</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+  </section>
+  <!--    nav      -->
   <!-- filters -->
   <div class="filters">
-    <a href=""> <button class="filter-options active">all</button></a>
-    <a href=""> <button class="filter-options">CSS</button></a>
-    <a href=""></a><button class="filter-options">web development</button></a>
+    <button class="filter-options active">all</button>
+    <button class="filter-options">CSS</button>
+    <button class="filter-options">web development</button>
     <button class="filter-options">python</button>
     <button class="filter-options">entertainment</button>
     <button class="filter-options">marvel</button>
@@ -67,21 +236,34 @@
 
   <!-- video-container -->
   <div class="video-container">
-    <!-- <div class="video">
-        <img src="img/profile-pic.png" class="thumbnail" alt="" />
-        <div class="content">
-          <img src="img/profile-pic.png" class="channel-icon" alt="" />
-          <div class="info">
-            <h4 class="title">
-              Railworld youtube clone 2024
-            </h4>
-            <p class="channel-name">modern web</p>
-          </div>
+    <div class="video">
+      <img src="img/profile-pic.png" class="thumbnail" alt="" />
+      <div class="content">
+        <img src="img/profile-pic.png" class="channel-icon" alt="" />
+        <div class="info">
+          <h4 class="title">
+            Railworld youtube clone 2024
+          </h4>
+          <p class="channel-name">modern web</p>
         </div>
-      </div> -->
+      </div>
+    </div>
   </div>
+
+
   <script src="https://apis.google.com/js/api.js"></script>
   <script src="script.js"></script>
+  <script>function toggleTheme() {
+      const currentTheme = document.getElementById('theme-stylesheet').getAttribute('href');
+      const lightTheme = 'light.css';
+      const darkTheme = 'dark.css';
+
+      if (currentTheme === lightTheme) {
+        document.getElementById('theme-stylesheet').setAttribute('href', darkTheme);
+      } else {
+        document.getElementById('theme-stylesheet').setAttribute('href', lightTheme);
+      }
+    }</script>
 </body>
 
 </html>

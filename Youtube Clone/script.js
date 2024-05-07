@@ -1,20 +1,20 @@
 // AIzaSyDwAFNySnJeFWvHI891LsavRjEX13rUOEA
 const videoCardContainer = document.querySelector('.video-container');
 
-let api_key = 'AIzaSyDwAFNySnJeFWvHI891LsavRjEX13rUOEA';
+let api_key = 'AIzaSyAvbDSfifX4ePbWPmLKC5d0hNNdeMdvUo4';
 let video_http = 'https://www.googleapis.com/youtube/v3/videos?';
-let channel_http = 'https://www.googleapis.com/youtube/v3/channels?'
+let channel_http = 'https://www.googleapis.com/youtube/v3/channels?';
 
 fetch(video_http + new URLSearchParams({
     key: api_key,
     part: 'snippet',
     chart: 'mostPopular',
-    maxResults:50,
-    regionCode:'IN'
+    maxResults: 50,
+    regionCode: 'IN'
 }))
     .then(res => res.json())
     .then(data => {
-        // console.log('Data : ', data);
+        console.log('Data : ', data);
         data.items.forEach((item) => {
             getChannelIcon(item);
         });
@@ -59,3 +59,23 @@ searchBtn.addEventListener('click', () => {
         location.href = searchLink + searchInput.value;
     }
 })
+
+
+// filter
+const filterOptions = document.querySelectorAll('.filter-options');
+filterOptions.forEach(filterOption => {
+    filterOption.addEventListener('click', () => {
+        const filter = filterOption.textContent.toLowerCase(); // Get the text content of the filter option
+        location.href = searchLink + filter;
+    });
+});
+
+////////////////////////////////////////////////////////////////
+//                      profile-menu
+////////////////////////////////////////////////////////////////
+
+let subMenu = document.getElementById('subMenu');
+
+function toggleMenu() {
+    subMenu.classList.toggle('open-menu');
+}
